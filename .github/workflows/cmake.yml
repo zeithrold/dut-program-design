@@ -1,0 +1,99 @@
+name: CMake
+
+on:
+  push:
+    branches: [ main, workflow ]
+  pull_request:
+    branches: [ main, workflow ]
+
+env:
+  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
+  BUILD_TYPE: Release
+
+jobs:
+  build-linux-clang:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-18.04, ubuntu-20.04]
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: Build
+      run: cmake CMakeLists.txt; make
+      env:
+        CC: clang
+        CXX: clang++
+  build-macos-clang:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-11, macos-10.15]
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: Build
+      run: cmake CMakeLists.txt; make
+      env:
+        CC: clang
+        CXX: clang++
+  build-linux-gcc:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-18.04, ubuntu-20.04]
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: Build
+      run: cmake CMakeLists.txt; make
+      env:
+        CC: gcc
+        CXX: g++
+  build-macos-gcc:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-11, macos-10.15]
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: Build
+      run: cmake -DCMAKE_C_COMPILER=/usr/local/bin/gcc-11 -DCMAKE_CXX_COMPILER=/usr/local/bin/g++-11 CMakeLists.txt; make
+      env:
+        CC: gcc-11
+        CXX: g++-11
+  build-windows-msvc:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-2019, windows-2022]
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: Build
+      shell: pwsh
+      run: cmake . && cmake --build .
+      env:
+        CC: msvc
+        CXX: msvc
+  build-windows-mingw:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [windows-2019, windows-2022]
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    - name: Build
+      shell: pwsh
+      run: 'cmake -G "MinGW Makefiles" . && cmake --build .'
+      env:
+        CC: gcc
+        CXX: g++

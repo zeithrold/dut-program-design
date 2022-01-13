@@ -1,0 +1,6 @@
+id,name,email,type,phone_numer,faculty,password
+zeithrold,金一,zeithrold@gmail.com,student,18624010482,Electronic Engineering,test
+admin,管理员,admin@example.dlut.edu.cn,teacher,10000000000,Electronic Engineering,admin
+office,学校办公室,office@example.dlut.edu.cn,teacher,20000000000,Office,office
+physics,物理,physics@example.dlut.edu.cn,student,30000000000,Physics,physics
+maths,数学,maths@example.dlut.edu.cn,student,40000000000,Maths,maths

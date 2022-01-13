@@ -11,8 +11,8 @@ The project is built pass on following environment:
 |Ubuntu 20.04|✔️|✔️|N/A|
 |macOS 10.15|✔️|✔️|N/A|
 |macOS 11|✔️|✔️|N/A|
-|Windows 2019|✔️(MinGW)||✔️|
-|Windows 2022|✔️(MinGW)||✔️|
+|Windows 2019|✔️(MinGW)|N/A|✔️|
+|Windows 2022|✔️(MinGW)|N/A|✔️|
 
 ## Licence
 BSD-3

@@ -1,6 +1,6 @@
 id,name,email,type,phone_numer,faculty,password
-zeithrold,½ğÒ»,zeithrold@gmail.com,student,18624010482,Electronic Engineering,test
-admin,¹ÜÀíÔ±,admin@example.dlut.edu.cn,teacher,10000000000,Electronic Engineering,admin
-office,Ñ§Ğ£°ì¹«ÊÒ,office@example.dlut.edu.cn,teacher,20000000000,Office,office
-physics,ÎïÀí,physics@example.dlut.edu.cn,student,30000000000,Physics,physics
-maths,ÊıÑ§,maths@example.dlut.edu.cn,student,40000000000,Maths,maths
+zeithrold,é‡‘ä¸€,zeithrold@gmail.com,student,18624010482,Electronic Engineering,test
+admin,ç®¡ç†å‘˜,admin@example.dlut.edu.cn,teacher,10000000000,Electronic Engineering,admin
+office,å­¦æ ¡åŠå…¬å®¤,office@example.dlut.edu.cn,teacher,20000000000,Office,office
+physics,ç‰©ç†,physics@example.dlut.edu.cn,student,30000000000,Physics,physics
+maths,æ•°å­¦,maths@example.dlut.edu.cn,student,40000000000,Maths,maths
